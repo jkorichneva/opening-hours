@@ -1,0 +1,55 @@
+.clockFrame {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--color-clock);
+    display: inline-flex;
+    margin-right: 12px;
+    margin-left: 2px;
+    position: relative;
+}
+
+.minutes {
+    background: var(--color-clock);
+    height: 46%;
+    left: 49%;
+    position: absolute;
+    top: 6%;
+    transform-origin: 50% 100%;
+    width: 9%;
+}
+
+.hours {
+    background: var(--color-clock);
+    height: 40%;
+    left: 48.75%;
+    position: absolute;
+    top: 10%;
+    transform-origin: 50% 100%;
+    width: 8%;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hoursContainer {
+    transform: rotateZ(120deg);
+}
+
+.hoursContainerAnimated {
+    animation: rotate 120s infinite linear;
+}
+
+.minutesContainerAnimated {
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

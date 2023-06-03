@@ -1,0 +1,32 @@
+.listItem {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--color-border-secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.dayName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.todayBadge {
+    text-transform: uppercase;
+    color: #5bcb02;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 10px;
+}
+
+.greyscaledText {
+    color: var(--color-closed);
+}
+
+.skeleton {
+    background: var(--color-border-secondary);
+    width: 100px;
+    height: 22px;
+    border-radius: 3px;
+}

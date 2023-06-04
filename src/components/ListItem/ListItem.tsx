@@ -12,17 +12,17 @@ export default function ListItem({
   openingHours,
   isToday,
 }: ListItemProps) {
-  const dayNameCapitalLetter = `${dayName
+  const dayNameWithCapitalLetter = `${dayName
     .slice(0, 1)
     .toUpperCase()}${dayName.slice(1)}`;
   return (
     <li className={styles.listItem}>
       <span className={styles.dayName}>
-        {dayNameCapitalLetter}
+        {dayNameWithCapitalLetter}
         {isToday && <span className={styles.todayBadge}>Today</span>}
       </span>
       {!!openingHours && (
-        <span className={openingHours === CLOSED ? styles.greyscaledText : ""}>
+        <span className={openingHours === CLOSED ? styles.greyscaleText : ""}>
           {openingHours}
         </span>
       )}

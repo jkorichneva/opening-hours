@@ -13,14 +13,14 @@
 
 .todayBadge {
     text-transform: uppercase;
-    color: #5bcb02;
+    color: var(--color-green);
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
     margin-left: 10px;
 }
 
-.greyscaledText {
+.greyscaleText {
     color: var(--color-closed);
 }
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTimetable } from "@/helpers/getTimetable";
+import { getWorkingHours } from "@/helpers/getWorkingHours";
 import sendError from "@/helpers/sendError";
 
 export function useWorkingHours() {
@@ -17,7 +17,7 @@ export function useWorkingHours() {
     })
       .then((result) => result.json())
       .then((data) => {
-        setOpeningHoursStrings(getTimetable(data));
+        setOpeningHoursStrings(getWorkingHours(data));
       })
       .catch((e) => {
         console.log(e);

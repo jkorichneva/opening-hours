@@ -1,23 +1,28 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --body-background: #f8f8f8;
-  --color-border: #202125;
-  --text-color: #202125;
-  --card-background: #ffffff;
-  --color-border-secondary: #eeeeee;
-  --color-clock: #a1a2a4;
-  --color-closed: #a1a2a4;
+  --color-black: #202125;
+  --color-white: #ffffff;
+  --color-green: #5BCB02;
+  --color-grey-1: #f8f8f8;
+  --color-grey-2: #eeeeee;
+  --color-grey-3: #a1a2a4;
+
+  --body-background: var(--color-grey-1);
+  --color-border: var(--color-black);
+  --text-color: var(--color-black);
+  --card-background: var(--color-white);
+  --color-border-secondary: var(--color-grey-2);
+  --color-clock: var(--color-grey-3);
+  --color-closed: var(--color-grey-3);
 }
 
 /*@media (prefers-color-scheme: dark) {*/
 /*  :root {*/
-/*    --body-background: #202125;*/
-/*    --color-border: #202125;*/
-/*    --text-color: #ffffff;*/
-/*    --card-background: #202125;*/
-/*    --color-border-secondary: #eeeeee;*/
-/*    --color-clock: #ffffff;*/
+/*    --body-background: var(--color-black);*/
+/*    --color-border: var(--color-black);*/
+/*    --text-color: var(--color-white);*/
+/*    --card-background: var(--color-black);*/
+/*    --color-border-secondary: var(--color-grey-2);*/
+/*    --color-clock: var(--color-white);*/
 /*  }*/
 /*}*/
 

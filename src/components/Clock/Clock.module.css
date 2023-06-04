@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.minutes {
+.min {
     background: var(--color-clock);
     height: 46%;
     left: 49%;
@@ -44,7 +44,7 @@
     animation: rotate 120s infinite linear;
 }
 
-.minutesContainerAnimated {
+.minContainerAnimated {
     animation: rotate 2s infinite linear;
 }
 

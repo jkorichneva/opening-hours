@@ -5,7 +5,7 @@ import { DAYS } from "@/constants/constants";
 import ListItem from "@/components/ListItem/ListItem";
 import { useId } from "react";
 import { useWorkingHours } from "@/hooks/useWorkingHours";
-import { handleClick } from "@/helpers/analytics";
+import { handleClick } from "@/helpers/sendAnalytics";
 
 export default function Worktable() {
   const { openingHoursStrings, currentDay, isError } = useWorkingHours();

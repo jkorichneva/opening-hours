@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import Worktable from "@/components/Worktable/Worktable";
 import * as useWorkingHours from "@/hooks/useWorkingHours";
-import * as analytics from "@/helpers/analytics";
+import * as analytics from "@/helpers/sendAnalytics";
 import userEvent from "@testing-library/user-event";
 describe("Worktable", () => {
   it("Should render without displaying error and handle click", async () => {
@@ -17,6 +17,7 @@ describe("Worktable", () => {
       },
       currentDay: 1,
       isError: false,
+      isLoading: false,
     }));
     const handleClick = jest.spyOn(analytics, "handleClick");
     const { getByText } = render(<Worktable />);
@@ -31,6 +32,7 @@ describe("Worktable", () => {
       openingHoursStrings: {},
       currentDay: 1,
       isError: true,
+      isLoading: false,
     }));
     const { getByText } = render(<Worktable />);
     expect(

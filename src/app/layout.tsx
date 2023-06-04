@@ -9,6 +9,7 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "Store opening hours",
+  description: "Sample application showing opening hours of the shop",
 };
 
 export default function RootLayout({

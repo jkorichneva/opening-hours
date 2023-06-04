@@ -10,15 +10,14 @@ type TimeFormat = {
 type ResultTime = {
   [K in (typeof DAYS)[number]]?: string;
 };
-export function getTimetable(externalOpeningHours: openingHours) {
-  // cloning, so we can mutate data
+export function getWorkingHours(externalOpeningHours: openingHours) {
   const openingHours = { ...externalOpeningHours };
   let result: ResultTime = {};
   DAYS.forEach((dayName, index) => {
     if (!openingHours[dayName].length) {
       result[dayName] = CLOSED;
     } else {
-      result[dayName] = handleOpeningHours(dayName, openingHours, index);
+      result[dayName] = formatOpeningHours(dayName, openingHours, index);
     }
   });
   return result;
@@ -38,7 +37,7 @@ function formatToAmPM(value: number) {
   }
 }
 
-function handleOpeningHours(
+function formatOpeningHours(
   dayName: keyof typeof openingHours,
   openingHours: openingHours,
   day: number

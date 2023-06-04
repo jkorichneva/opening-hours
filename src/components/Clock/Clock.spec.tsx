@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Clock from "@/components/Clock/Clock";
-import * as analytics from "@/helpers/analytics";
+import * as analytics from "@/helpers/sendAnalytics";
 describe("Clock", () => {
   it("Should render clock and handle mouse enter/leave", async () => {
     const { getByTestId } = render(<Clock />);

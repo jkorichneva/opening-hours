@@ -4,16 +4,11 @@ import {
   waitFor,
   act,
 } from "@testing-library/react";
-import fetchMock from "jest-fetch-mock";
 import { useWorkingHours } from "@/hooks/useWorkingHours";
 import mock from "../../backend/hoursMock.json";
 
 describe("Use Working Hours Hook", () => {
-  beforeEach(() => {
-    fetchMock.resetMocks();
-  });
-
-  it("Should return error", async () => {
+  it("Should return error while parsing data", async () => {
     const spy = jest.fn().mockImplementation(() =>
       Promise.resolve({
         json: () => Promise.resolve("lkl"),
@@ -41,7 +36,6 @@ describe("Use Working Hours Hook", () => {
       })
     );
     global.fetch = spy;
-    fetchMock.mockResponseOnce(JSON.stringify(mock));
     let hook;
     await act(async () => {
       hook = renderHook(() => useWorkingHours());

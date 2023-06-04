@@ -1,9 +1,9 @@
-import { getTimetable } from "@/helpers/getTimetable";
+import { getWorkingHours } from "@/helpers/getWorkingHours";
 
 describe("Should format time correctly", () => {
-  it("Should return string with one opening", () => {
+  it("Should return strings with various cases", () => {
     expect(
-      getTimetable({
+      getWorkingHours({
         monday: [],
         tuesday: [
           { type: "open", value: 36000 },

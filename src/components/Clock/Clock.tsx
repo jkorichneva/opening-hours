@@ -1,7 +1,7 @@
 "use client";
 import styles from "@/components/Clock/Clock.module.css";
 import { useState } from "react";
-import { hoverClock } from "@/helpers/analytics";
+import { hoverClock } from "@/helpers/sendAnalytics";
 export default function Clock() {
   const [animated, setAnimated] = useState(false);
   return (
@@ -16,10 +16,10 @@ export default function Clock() {
     >
       <div
         className={`${styles.container} ${
-          animated ? styles.minutesContainerAnimated : ""
+          animated ? styles.minContainerAnimated : ""
         }`}
       >
-        <div className={styles.minutes}></div>
+        <div className={styles.min}></div>
       </div>
       <div
         className={`${styles.container} ${styles.hoursContainer}

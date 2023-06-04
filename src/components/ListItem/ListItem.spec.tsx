@@ -27,7 +27,7 @@ describe("ListItem", () => {
   });
 
   it("Should render without skeleton, just empty opening hours", () => {
-    const { getByText, getByTestId } = render(
+    const { getByText } = render(
       <ListItem dayName="monday" openingHours={null} isToday={true} />
     );
     expect(getByText("Today")).toBeInTheDocument();

@@ -1,5 +1,4 @@
 import { CLOSED, DAYS } from "@/constants/constants";
-import sendError from "@/helpers/sendError";
 type openingHours = {
   [K in (typeof DAYS)[number]]: TimeFormat[];
 };

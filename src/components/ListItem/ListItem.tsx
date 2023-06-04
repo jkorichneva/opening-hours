@@ -26,7 +26,9 @@ export default function ListItem({
           {openingHours}
         </span>
       )}
-      {openingHours === undefined && <span className={styles.skeleton}></span>}
+      {openingHours === undefined && (
+        <span className={styles.skeleton} data-testid="listItemSkeleton"></span>
+      )}
     </li>
   );
 }

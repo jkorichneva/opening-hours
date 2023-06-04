@@ -1,13 +1,18 @@
 "use client";
 import styles from "@/components/Clock/Clock.module.css";
 import { useState } from "react";
+import { hoverClock } from "@/helpers/analytics";
 export default function Clock() {
   const [animated, setAnimated] = useState(false);
   return (
     <div
       className={styles.clockFrame}
       onMouseEnter={() => setAnimated(true)}
-      onMouseLeave={() => setAnimated(false)}
+      onMouseLeave={() => {
+        setAnimated(false);
+        hoverClock();
+      }}
+      data-testid="clock"
     >
       <div
         className={`${styles.container} ${

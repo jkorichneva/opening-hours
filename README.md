@@ -1,5 +1,3 @@
-- check readme
-
 Application that is requesting opening hours from backend and displaying them.
 - displays skeleton while fetching data, error if fetching has failed
 - handles errors from backend and while parsing data, sends them into error tracker
@@ -7,6 +5,8 @@ Application that is requesting opening hours from backend and displaying them.
 - includes a small easter egg in clock icon
 
 ## Getting Started
+
+Prerequisites: [node 18](https://nodejs.org/en/download)
 
 First, install the dependencies with `npm ci`. Then run application with
 

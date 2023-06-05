@@ -10,11 +10,7 @@ export function useWorkingHours() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const abortController = new AbortController();
-
-    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/openingHours`, {
-      signal: abortController.signal,
-    })
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/openingHours`)
       .then((result) => result.json())
       .then((data) => {
         setOpeningHoursStrings(getWorkingHours(data));
@@ -31,9 +27,6 @@ export function useWorkingHours() {
         setOpeningHoursStrings({});
       })
       .finally(() => setIsLoading(false));
-    return () => {
-      abortController.abort();
-    };
   }, []);
   return {
     openingHoursStrings,

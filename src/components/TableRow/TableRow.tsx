@@ -1,34 +1,34 @@
-import styles from "@/components/ListItem/ListItem.module.css";
+import styles from "@/components/TableRow/TableRow.module.css";
 import { CLOSED } from "@/constants/constants";
 
-type ListItemProps = {
+type TableRowProps = {
   dayName: string;
   openingHours: string | null | undefined;
   isToday: boolean;
 };
 
-export default function ListItem({
+export default function TableRow({
   dayName,
   openingHours,
   isToday,
-}: ListItemProps) {
+}: TableRowProps) {
   const dayNameWithCapitalLetter = `${dayName
     .slice(0, 1)
     .toUpperCase()}${dayName.slice(1)}`;
   return (
-    <li className={styles.listItem}>
-      <span className={styles.dayName}>
+    <tr className={styles.listItem}>
+      <td className={styles.dayName}>
         {dayNameWithCapitalLetter}
         {isToday && <span className={styles.todayBadge}>Today</span>}
-      </span>
+      </td>
       {!!openingHours && (
-        <span className={openingHours === CLOSED ? styles.greyscaleText : ""}>
+        <td className={openingHours === CLOSED ? styles.greyscaleText : ""}>
           {openingHours}
-        </span>
+        </td>
       )}
       {openingHours === undefined && (
-        <span className={styles.skeleton} data-testid="listItemSkeleton"></span>
+        <td className={styles.skeleton} data-testid="listItemSkeleton"></td>
       )}
-    </li>
+    </tr>
   );
 }
